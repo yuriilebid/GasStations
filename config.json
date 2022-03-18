@@ -1,0 +1,141 @@
+{
+  "instanceId": "1",
+  "version": 6.8,
+  "upload": {
+    "addr": "192.168.100.29",
+    "port": 3030
+  },
+  "users": [
+    {
+      "login": "POS",
+      "pass": "mPOSnew01"
+    }
+  ],
+  "fuelGradesConfiguration": [
+    {
+      "Id": 1,
+      "Name": "A92",
+      "Price": 26.5
+    },
+    {
+      "Id": 2,
+      "Name": "A95",
+      "Price": 26.5
+    },
+    {
+      "Id": 3,
+      "Name": "A95E",
+      "Price": 16.5
+    },
+    {
+      "Id": 4,
+      "Name": "DIESEL",
+      "Price": 25.5
+    }
+  ],
+  "lines": [
+    {
+      "enabled": false,
+      "data_validity_time": 10,
+      "communication": {
+        "trace": false,
+        "unique_logs": true,
+        "transportation": "tcp",
+        "addr": "192.168.100.52",
+        "port": 5555
+      },
+      "protocol": "unipump",
+      "columns": [
+        {
+          "trace": false,
+          "Id": 1,
+          "addr": 1,
+          "pistols": [
+            {
+              "addr": 1,
+              "product_id": 3
+            },
+            {
+              "addr": 2,
+              "product_id": 2
+            }
+          ]
+        },
+        {
+          "Id": 2,
+          "trace": false,
+          "addr": 2,
+          "pistols": [
+            {
+              "addr": 1,
+              "product_id": 3
+            }
+          ]
+        },
+        {
+          "Id": 3,
+          "trace": false,
+          "addr": 3,
+          "pistols": [
+            {
+              "addr": 1,
+              "product_id": 3
+            }
+          ]
+        },
+        {
+          "Id": 4,
+          "trace": false,
+          "addr": 4,
+          "pistols": [
+            {
+              "addr": 1,
+              "product_id": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "jsons": [
+    {
+      "enabled": false,
+      "communication": {
+        "trace": true,
+        "unique_logs": true,
+        "addr": "0.0.0.0",
+        "port": 8081
+      }
+    }
+  ],
+  "fiscals": [
+    {
+      "enabled": false,
+      "simulation_waiting": 10,
+      "communication": {
+        "trace": false,
+        "unique_logs": false,
+        "transportation": "tcp",
+        "addr": "192.168.100.79",
+        "port": 10001
+      },
+      "user": "fiscal1",
+      "fiscal": "maria",
+      "protocol": "shelf"
+    },
+    {
+      "enabled": false,
+      "simulation_waiting": 10,
+      "communication": {
+        "trace": false,
+        "unique_logs": false,
+        "transportation": "tcp",
+        "addr": "192.168.100.81",
+        "port": 10001
+      },
+      "user": "fiscal2",
+      "fiscal": "techno",
+      "protocol": "shelf"
+    }
+  ]
+}
